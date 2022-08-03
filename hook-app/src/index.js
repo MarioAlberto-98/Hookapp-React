@@ -1,6 +1,8 @@
  import React from 'react';
  import ReactDOM from 'react-dom';
-import { TodoApp } from './components/09-useReducer/TodoApp';
+ import{BrowserRouter} from "react-router-dom"
+ import { MainApp } from './components/10-useContext/MainApp';
+//import { TodoApp } from './components/09-useReducer/TodoApp';
 // //import { MemoHook } from './components/06-memos/MemoHook';
 // //import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook';
 // //import { Layout } from './components/05-useLayoutEffect/Layout';
@@ -15,11 +17,20 @@ import { TodoApp } from './components/09-useReducer/TodoApp';
 // import {Padre} from './components/07-tarea-memo/Padre'
 //import './components/08-useReducer/intro-reducer'
 
-
-
-
+/*
  ReactDOM.render(
    <TodoApp />,
    document.getElementById('root')
  );
+*/ 
+ /*connect your app to the browser's URL */
+ /* <BrowserRouter>   Da acceso a todos los hijos de la informacion que provee el padre*/
+ /*<MainApp/>    Hijo*/
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+  <MainApp/> 
+  </BrowserRouter>
+
+)
+
 
